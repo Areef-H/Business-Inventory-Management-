@@ -25,17 +25,8 @@ VALUES
 
     -- Software
     ('iCloud+ 50GB', 'Software', NULL, NULL, 0.99),
-    ('iCloud+ 200GB', 'Software', NULL, NULL, 2.99),
-    ('iCloud+ 2TB', 'Software', NULL, NULL, 9.99);
-
-
-INSERT INTO Sales (ProductID, Quantity)
-VALUES 
-    (1, 3),  -- 3 units of "Macbook Air"
-    (2, 2),  -- 2 units of "Macbook Pro"
-    (5, 5),  -- 5 units of "iPhone 13"
-    (10, 1), -- 1 unit of "Magsafe Case - iPhone 14"
-    (13, 1); -- 1 subscription of "iCloud+ 2TB"
+    ('iCloud+ 200GB', 'Software', NULL, NULL, 2.99);
+    -- ('iCloud+ 2TB', 'Software', NULL, NULL, 9.99);
 
 
 
