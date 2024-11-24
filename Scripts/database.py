@@ -1,6 +1,6 @@
 import sqlite3
 
-def connect_to_db(db_name='inventory.db'):
+def connect_to_db(db_name):
     """Connect to the SQLite database."""
     conn = sqlite3.connect(db_name)
     return conn
