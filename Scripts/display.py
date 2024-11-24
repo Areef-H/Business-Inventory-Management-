@@ -1,4 +1,5 @@
-from database import connect_to_db
+from database import connect_to_db, ensure_connection
+
 class display_menu():
 
      def main_menu(self):
@@ -17,12 +18,14 @@ class display_menu():
                 2.) Accessories
                 3.) Mechanical Parts
                 4.) Software
-             """)       
+             """)    
+        return
+           
 
      """ Utilizing SQLite """
-     def display_product_listing(self,table_name):
+     def display_product_listing(self,conn,table_name):
         """Fetch and display all rows from the specified table."""
-        conn = connect_to_db('Inventory_db/inventory.db')  # Path to your database
+        conn = ensure_connection(conn)
         cursor = conn.cursor()
 
         try:
@@ -44,6 +47,7 @@ class display_menu():
             print(f"Error fetching data from table {table_name}: {e}")
         finally:
             conn.close()
+     
 
 
  

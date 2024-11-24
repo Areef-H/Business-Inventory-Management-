@@ -21,7 +21,7 @@ VALUES
     ('Magsafe Case - iPhone 15', 'Accessories', 'Space Gray', 25, 49.00),
 
     -- Mechanical Parts
-    ('Apple Mac Pro Wheels Kit', 'Mechanical Parts', NULL, 10, 699.00),
+    ('Apple Mac Pro Wheels Kit', 'Mechanical Parts', 'Silver', 10, 699.00),
 
     -- Software
     ('iCloud+ 50GB', 'Software', NULL, NULL, 0.99),

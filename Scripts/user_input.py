@@ -70,7 +70,7 @@ def getIntRange(prompt, start, end, outliers=[]):
             userInput = getInt(prompt)
 
             # Checking if user input is within the given ranges 
-            if (userInput not in outliers) and (userInput < start or userInput >= end):
+            if (userInput not in outliers) and (userInput < start or userInput >= end) or userInput == "Null":
 
                 # Handles raising exceptions when start and end are not equal and equal
                 raise ValueError("Integer must be between " + str(start) + " and " + str(end - 1) +

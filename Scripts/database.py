@@ -12,3 +12,14 @@ def execute_sql_file(conn, sql_file):
     conn.executescript(sql_script)
     conn.commit()
     print(f"Executed {sql_file} successfully.")
+
+def ensure_connection(conn):
+    """Ensure the database connection is open. Reopen it if closed."""
+    try:
+        # Test if the connection is still open
+        conn.execute("SELECT 1")
+        return conn
+    except sqlite3.ProgrammingError:
+        # Reopen the connection if closed
+        conn = connect_to_db('Inventory_db/inventory.db')
+        return conn

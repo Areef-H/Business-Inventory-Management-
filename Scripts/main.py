@@ -9,10 +9,12 @@ def main():
 
     # Step 3: Execute the data insertion script
     execute_sql_file(conn, 'Inventory_db/insert_data.sql')  # Run data insertion SQL
+   
 
-    menu().menu_main()
+    menu().menu_main(conn)
     
     conn.close()
+
 
 if __name__ == "__main__":
     main()
